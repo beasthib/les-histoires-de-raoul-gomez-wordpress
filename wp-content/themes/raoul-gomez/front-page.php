@@ -47,9 +47,6 @@ $assets = get_stylesheet_directory_uri() . '/assets';
 		</div>
 
 		<div class="cable-car">
-			<svg class="cable-line" viewBox="0 0 600 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-				<line x1="0" y1="150" x2="600" y2="10" stroke="#8a8a8a" stroke-width="2" />
-			</svg>
 			<img class="cabin cabin-1" src="<?php echo esc_url( $assets . '/telecabine.png' ); ?>" alt="" />
 			<img class="cabin cabin-2" src="<?php echo esc_url( $assets . '/telecabine.png' ); ?>" alt="" />
 			<img class="cabin cabin-3" src="<?php echo esc_url( $assets . '/telecabine.png' ); ?>" alt="" />

@@ -369,15 +369,8 @@ a {
   right: 0;
   bottom: 0;
   width: 42%;
-  height: 200px;
+  height: 240px;
   pointer-events: none;
-}
-
-.cable-car .cable-line {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .cable-car .cabin {
@@ -387,19 +380,27 @@ a {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
 }
 
+/*
+ * Chaque image telecabine.png contient deja son propre bout de cable :
+ * il touche le bord gauche de l'image a y=62px et le bord droit a y=0
+ * (image source 115x155). En accolant les cabines (gauche = droite de
+ * la precedente) et en remontant chacune de 62px * (80/115) = 43px,
+ * les segments de cable de chaque image se prolongent exactement les
+ * uns dans les autres pour ne former qu'une seule ligne continue.
+ */
 .cable-car .cabin-1 {
-  left: 14%;
-  top: 58%;
+  left: 120px;
+  top: 125px;
 }
 
 .cable-car .cabin-2 {
-  left: 46%;
-  top: 34%;
+  left: 200px;
+  top: 82px;
 }
 
 .cable-car .cabin-3 {
-  left: 78%;
-  top: 6%;
+  left: 280px;
+  top: 39px;
 }
 
 /* ---------- Content sections (one-page nav targets) ---------- */
