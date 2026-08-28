@@ -7,6 +7,14 @@ Version: 0.1.0
 Text Domain: raoul-gomez
 */
 
+@font-face {
+  font-family: "Gagalin";
+  src: url("assets/fonts/Gagalin-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --ink: #1c1a17;
   --white: #ffffff;
