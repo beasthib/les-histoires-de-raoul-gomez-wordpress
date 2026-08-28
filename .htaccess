@@ -1,0 +1,8 @@
+# BEGIN WordPress
+RewriteEngine On
+RewriteBase /les-histoires-de-raoul-gomez-wp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /les-histoires-de-raoul-gomez-wp/index.php [L]
+# END WordPress

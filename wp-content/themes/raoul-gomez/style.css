@@ -1,0 +1,656 @@
+/*
+Theme Name: Raoul Gomez
+Theme URI: https://github.com/beasthib/les-histoires-de-raoul-gomez-wordpress
+Author: Beasthib
+Description: Theme custom pour le site du podcast "Les Histoires de Raoul Gomez", d'apres la maquette Canva.
+Version: 0.1.0
+Text Domain: raoul-gomez
+*/
+
+:root {
+  --ink: #1c1a17;
+  --white: #ffffff;
+  --bg-top: #f2a53d;
+  --bg-mid: #e9cd75;
+  --bg-low: #bfd4b2;
+  --bg-bottom: #93bfc9;
+  --avatar-pink: #e7a89c;
+  --bat-purple: #7a4fa0;
+  --star-1: #ffd35c;
+  --star-2: #f28c28;
+  --youtube-red: #ff3b3b;
+  --heart-purple: #8c3fd6;
+  --sand: #e3c58c;
+  --sand-dark: #d3b06e;
+  --cactus-green: #4f8c58;
+  --cactus-green-dark: #3d6f45;
+  --flower-pink: #ef9ec3;
+  --font-title: "Chewy", "Baloo 2", cursive;
+  --font-body: "Baloo 2", "Nunito", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Hero / page background */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--bg-top) 0%,
+    var(--bg-mid) 38%,
+    var(--bg-low) 68%,
+    var(--bg-bottom) 100%
+  );
+  overflow: hidden;
+}
+
+/* ---------- Decorative sky elements ---------- */
+
+.sparkle {
+  position: absolute;
+  color: #fff;
+  font-size: 1.4rem;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
+}
+
+.cloud {
+  position: absolute;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.06));
+}
+
+.cloud-1 {
+  width: 240px;
+  top: -14px;
+  left: 2%;
+}
+
+.cloud-2 {
+  width: 280px;
+  top: -18px;
+  right: 4%;
+}
+
+.bat {
+  position: absolute;
+  top: 60px;
+  right: 4%;
+  width: 46px;
+  height: 30px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  padding: 28px 0 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-badge {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--avatar-pink);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  flex: none;
+}
+
+.avatar-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.main-nav a {
+  display: inline-block;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease;
+}
+
+.main-nav a:hover,
+.main-nav .current-menu-item a {
+  transform: translateY(-2px);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ---------- Hero content ---------- */
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  padding: 70px 0 10px;
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  margin: 0 0 22px;
+  color: var(--ink);
+  text-shadow: 0 2px 0 #fff, 0 4px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.01em;
+}
+
+.hero-tagline {
+  font-family: var(--font-body);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  margin: 0 0 10px;
+}
+
+.hero-credit {
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: rgba(28, 26, 23, 0.75);
+  margin: 0;
+}
+
+/* ---------- Scene: mascot + speech bubble + badges ---------- */
+
+.scene {
+  position: relative;
+  min-height: 460px;
+  margin-top: 40px;
+}
+
+.scene-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 32px;
+}
+
+/* Sand dune */
+.dune {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46%;
+  height: 200px;
+  background: linear-gradient(180deg, var(--sand) 0%, var(--sand-dark) 100%);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+/* Cactus */
+.cactus {
+  position: absolute;
+  bottom: 60px;
+  width: 70px;
+  height: 170px;
+}
+
+.cactus-1 {
+  left: 4%;
+  height: 140px;
+}
+
+.cactus-2 {
+  left: 11%;
+}
+
+.cactus-body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 100%;
+  background: var(--cactus-green);
+  border-radius: 16px;
+  box-shadow: inset -4px 0 0 var(--cactus-green-dark);
+}
+
+.cactus-arm {
+  position: absolute;
+  width: 20px;
+  height: 55px;
+  background: var(--cactus-green);
+  border-radius: 12px;
+  box-shadow: inset -3px 0 0 var(--cactus-green-dark);
+}
+
+.cactus-arm.left {
+  bottom: 55%;
+  left: -6px;
+  transform: rotate(-18deg);
+}
+
+.cactus-arm.right {
+  bottom: 45%;
+  right: -6px;
+  transform: rotate(18deg);
+}
+
+.cactus-flower {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--flower-pink);
+  border-radius: 50% 50% 50% 0;
+  rotate: 45deg;
+}
+
+.butterfly {
+  position: absolute;
+  left: 16%;
+  bottom: 165px;
+  font-size: 1.6rem;
+}
+
+/* Cat mascot (simple SVG-style CSS build) */
+.cat {
+  position: absolute;
+  left: 17%;
+  bottom: 55px;
+  width: 130px;
+  height: 165px;
+}
+
+.cat-body {
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 90px;
+  height: 110px;
+  background: #f4f1ea;
+  border: 3px solid var(--ink);
+  border-radius: 50% 50% 45% 45%;
+}
+
+.cat-tail {
+  position: absolute;
+  bottom: 20px;
+  left: -6px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  background: #f4f1ea;
+  transform: rotate(35deg);
+}
+
+.cat-head {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 80px;
+  height: 72px;
+  background: #f4f1ea;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+}
+
+.cat-ear {
+  position: absolute;
+  top: -14px;
+  width: 22px;
+  height: 26px;
+  background: #f4f1ea;
+  border: 3px solid var(--ink);
+  border-radius: 50% 50% 0 0;
+}
+
+.cat-ear.left {
+  left: 6px;
+  transform: rotate(-18deg);
+}
+
+.cat-ear.right {
+  right: 6px;
+  transform: rotate(18deg);
+}
+
+.cat-eye {
+  position: absolute;
+  top: 30px;
+  width: 6px;
+  height: 8px;
+  background: var(--ink);
+  border-radius: 50%;
+}
+
+.cat-eye.left {
+  left: 22px;
+}
+
+.cat-eye.right {
+  right: 22px;
+}
+
+.cat-mouth {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 8px;
+  border: 2px solid var(--ink);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.cat-spot {
+  position: absolute;
+  background: var(--ink);
+  border-radius: 45%;
+  opacity: 0.9;
+}
+
+/* Speech bubble */
+.speech-bubble {
+  position: absolute;
+  left: 30%;
+  bottom: 180px;
+  width: 240px;
+}
+
+.speech-bubble-shadow {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background: var(--ink);
+  border-radius: 18px;
+}
+
+.speech-bubble-box {
+  position: relative;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.speech-bubble-box p {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.speech-bubble-tail {
+  position: absolute;
+  bottom: -22px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-right: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  transform: rotate(45deg) skew(6deg, 6deg);
+}
+
+/* Platform stars */
+.platforms {
+  position: absolute;
+  right: 6%;
+  bottom: 190px;
+  display: flex;
+  gap: 22px;
+}
+
+.platform-star {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-star svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.platform-star .icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-star .icon-youtube {
+  width: 34px;
+  height: 24px;
+  background: var(--youtube-red);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-star .icon-youtube::after {
+  content: "";
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 2px;
+}
+
+.platform-star .icon-text {
+  font-family: var(--font-body);
+  font-weight: 800;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.platform-star .icon-heart {
+  width: 30px;
+  height: 30px;
+  background: var(--heart-purple);
+  position: relative;
+  transform: rotate(-45deg);
+  border-radius: 4px 0;
+}
+
+.platform-star .icon-heart::before,
+.platform-star .icon-heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--heart-purple);
+  border-radius: 50%;
+}
+
+.platform-star .icon-heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.platform-star .icon-heart::after {
+  top: 0;
+  left: 15px;
+}
+
+.platform-star .icon-waves {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.platform-star .icon-waves span {
+  display: block;
+  width: 4px;
+  border-radius: 2px;
+  background: #2c2c54;
+}
+
+.platform-star .icon-waves span:nth-child(1) {
+  height: 10px;
+}
+.platform-star .icon-waves span:nth-child(2) {
+  height: 18px;
+}
+.platform-star .icon-waves span:nth-child(3) {
+  height: 24px;
+}
+.platform-star .icon-waves span:nth-child(4) {
+  height: 18px;
+}
+.platform-star .icon-waves span:nth-child(5) {
+  height: 10px;
+}
+
+/* Cable car */
+.cable-car {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  height: 200px;
+  pointer-events: none;
+}
+
+.cable-car svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--bg-bottom);
+  padding: 28px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(28, 26, 23, 0.8);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .scene {
+    min-height: 900px;
+  }
+
+  .platforms {
+    right: 5%;
+    bottom: auto;
+    top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .speech-bubble {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: auto;
+    top: 210px;
+  }
+
+  .cat {
+    left: 50%;
+    transform: translateX(-90px);
+    bottom: 260px;
+  }
+
+  .dune {
+    width: 100%;
+  }
+
+  .cactus-1,
+  .cactus-2,
+  .butterfly {
+    display: none;
+  }
+
+  .cable-car {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .main-nav a {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
