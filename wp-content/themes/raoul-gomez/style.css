@@ -127,7 +127,8 @@ a {
 .avatar-badge img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 10px;
 }
 
 .main-nav {
@@ -232,173 +233,30 @@ a {
 }
 
 /* Cactus */
-.cactus {
+.cactus-illustration {
   position: absolute;
-  bottom: 60px;
-  width: 70px;
-  height: 170px;
-}
-
-.cactus-1 {
-  left: 4%;
-  height: 140px;
-}
-
-.cactus-2 {
-  left: 11%;
-}
-
-.cactus-body {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 100%;
-  background: var(--cactus-green);
-  border-radius: 16px;
-  box-shadow: inset -4px 0 0 var(--cactus-green-dark);
-}
-
-.cactus-arm {
-  position: absolute;
-  width: 20px;
-  height: 55px;
-  background: var(--cactus-green);
-  border-radius: 12px;
-  box-shadow: inset -3px 0 0 var(--cactus-green-dark);
-}
-
-.cactus-arm.left {
-  bottom: 55%;
-  left: -6px;
-  transform: rotate(-18deg);
-}
-
-.cactus-arm.right {
-  bottom: 45%;
-  right: -6px;
-  transform: rotate(18deg);
-}
-
-.cactus-flower {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
-  background: var(--flower-pink);
-  border-radius: 50% 50% 50% 0;
-  rotate: 45deg;
+  left: 2%;
+  bottom: 40px;
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.08));
 }
 
 .butterfly {
   position: absolute;
-  left: 16%;
-  bottom: 165px;
+  left: 4%;
+  bottom: 260px;
   font-size: 1.6rem;
 }
 
-/* Cat mascot (simple SVG-style CSS build) */
-.cat {
+/* Cat mascot */
+.cat-illustration {
   position: absolute;
-  left: 17%;
-  bottom: 55px;
-  width: 130px;
-  height: 165px;
-}
-
-.cat-body {
-  position: absolute;
-  bottom: 0;
-  left: 15px;
-  width: 90px;
-  height: 110px;
-  background: #f4f1ea;
-  border: 3px solid var(--ink);
-  border-radius: 50% 50% 45% 45%;
-}
-
-.cat-tail {
-  position: absolute;
-  bottom: 20px;
-  left: -6px;
-  width: 60px;
-  height: 60px;
-  border: 3px solid var(--ink);
-  border-radius: 50%;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  background: #f4f1ea;
-  transform: rotate(35deg);
-}
-
-.cat-head {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  width: 80px;
-  height: 72px;
-  background: #f4f1ea;
-  border: 3px solid var(--ink);
-  border-radius: 50%;
-}
-
-.cat-ear {
-  position: absolute;
-  top: -14px;
-  width: 22px;
-  height: 26px;
-  background: #f4f1ea;
-  border: 3px solid var(--ink);
-  border-radius: 50% 50% 0 0;
-}
-
-.cat-ear.left {
-  left: 6px;
-  transform: rotate(-18deg);
-}
-
-.cat-ear.right {
-  right: 6px;
-  transform: rotate(18deg);
-}
-
-.cat-eye {
-  position: absolute;
-  top: 30px;
-  width: 6px;
-  height: 8px;
-  background: var(--ink);
-  border-radius: 50%;
-}
-
-.cat-eye.left {
-  left: 22px;
-}
-
-.cat-eye.right {
-  right: 22px;
-}
-
-.cat-mouth {
-  position: absolute;
-  top: 42px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 8px;
-  border: 2px solid var(--ink);
-  border-top: none;
-  border-radius: 0 0 10px 10px;
-}
-
-.cat-spot {
-  position: absolute;
-  background: var(--ink);
-  border-radius: 45%;
-  opacity: 0.9;
+  left: 19%;
+  bottom: 40px;
+  width: 170px;
+  height: auto;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.1));
 }
 
 /* Speech bubble */
@@ -464,9 +322,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.15s ease;
 }
 
-.platform-star svg {
+.platform-star:hover {
+  transform: translateY(-3px);
+}
+
+.platform-star .star-bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -474,100 +337,16 @@ a {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
 }
 
-.platform-star .icon {
+.platform-star .star-icon {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 42px;
+  height: auto;
+  object-fit: contain;
 }
 
-.platform-star .icon-youtube {
-  width: 34px;
-  height: 24px;
-  background: var(--youtube-red);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.platform-star .icon-youtube::after {
-  content: "";
-  border-style: solid;
-  border-width: 6px 0 6px 10px;
-  border-color: transparent transparent transparent #fff;
-  margin-left: 2px;
-}
-
-.platform-star .icon-text {
-  font-family: var(--font-body);
-  font-weight: 800;
-  color: var(--ink);
-  font-size: 0.95rem;
-}
-
-.platform-star .icon-heart {
-  width: 30px;
-  height: 30px;
-  background: var(--heart-purple);
-  position: relative;
-  transform: rotate(-45deg);
-  border-radius: 4px 0;
-}
-
-.platform-star .icon-heart::before,
-.platform-star .icon-heart::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: var(--heart-purple);
-  border-radius: 50%;
-}
-
-.platform-star .icon-heart::before {
-  top: -15px;
-  left: 0;
-}
-
-.platform-star .icon-heart::after {
-  top: 0;
-  left: 15px;
-}
-
-.platform-star .icon-waves {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-}
-
-.platform-star .icon-waves span {
-  display: block;
-  width: 4px;
-  border-radius: 2px;
-  background: #2c2c54;
-}
-
-.platform-star .icon-waves span:nth-child(1) {
-  height: 10px;
-}
-.platform-star .icon-waves span:nth-child(2) {
-  height: 18px;
-}
-.platform-star .icon-waves span:nth-child(3) {
-  height: 24px;
-}
-.platform-star .icon-waves span:nth-child(4) {
-  height: 18px;
-}
-.platform-star .icon-waves span:nth-child(5) {
-  height: 10px;
+.platform-star .star-icon-small {
+  width: 32px;
 }
 
 /* Cable car */
@@ -580,9 +359,33 @@ a {
   pointer-events: none;
 }
 
-.cable-car svg {
+.cable-car .cable-line {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+}
+
+.cable-car .cabin {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.cable-car .cabin-1 {
+  left: 14%;
+  top: 6%;
+}
+
+.cable-car .cabin-2 {
+  left: 46%;
+  top: 34%;
+}
+
+.cable-car .cabin-3 {
+  left: 78%;
+  top: 58%;
 }
 
 /* ---------- Footer ---------- */
@@ -618,7 +421,7 @@ a {
     top: 210px;
   }
 
-  .cat {
+  .cat-illustration {
     left: 50%;
     transform: translateX(-90px);
     bottom: 260px;
@@ -628,8 +431,7 @@ a {
     width: 100%;
   }
 
-  .cactus-1,
-  .cactus-2,
+  .cactus-illustration,
   .butterfly {
     display: none;
   }

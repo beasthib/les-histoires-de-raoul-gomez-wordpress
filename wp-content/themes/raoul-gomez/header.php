@@ -38,7 +38,7 @@
 	<header class="site-header">
 		<div class="container header-inner">
 			<div class="avatar-badge">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/avatar.jpg' ); ?>" alt="<?php esc_attr_e( 'Raoul Gomez', 'raoul-gomez' ); ?>" />
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/avatar-cat.png' ); ?>" alt="<?php esc_attr_e( 'Raoul Gomez', 'raoul-gomez' ); ?>" />
 			</div>
 
 			<?php
