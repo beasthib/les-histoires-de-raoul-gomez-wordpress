@@ -124,6 +124,7 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 
 .avatar-badge {
@@ -135,6 +136,8 @@ a {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   flex: none;
+  position: absolute;
+  left: 0;
 }
 
 .avatar-badge img {
@@ -148,10 +151,11 @@ a {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
   margin: 0;
   padding: 0;
-  flex: 1;
+  width: 100%;
 }
 
 .main-nav a {
@@ -275,7 +279,7 @@ a {
   position: absolute;
   left: 19%;
   bottom: 40px;
-  width: 170px;
+  width: 210px;
   height: auto;
   filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.1));
 }
@@ -284,8 +288,8 @@ a {
 .speech-bubble {
   position: absolute;
   left: 30%;
-  bottom: 260px;
-  width: 240px;
+  bottom: 340px;
+  width: 280px;
 }
 
 .speech-bubble-shadow {
@@ -311,7 +315,7 @@ a {
   margin: 0;
   font-family: var(--font-title);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.25;
 }
 
@@ -503,8 +507,9 @@ a {
     align-items: center;
   }
 
-  .main-nav {
-    justify-content: center;
+  .avatar-badge {
+    position: static;
+    margin-bottom: 12px;
   }
 
   .main-nav a {
