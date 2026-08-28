@@ -27,6 +27,7 @@ Text Domain: raoul-gomez
   --flower-pink: #ef9ec3;
   --font-title: "Chewy", "Baloo 2", cursive;
   --font-body: "Baloo 2", "Nunito", sans-serif;
+  --font-tagline: "Gagalin", "Baloo 2", "Nunito", sans-serif;
 }
 
 * {
@@ -188,7 +189,7 @@ a {
 }
 
 .hero-tagline {
-  font-family: var(--font-body);
+  font-family: var(--font-tagline);
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1.15rem;
@@ -197,13 +198,21 @@ a {
 }
 
 .hero-credit {
-  font-family: var(--font-body);
+  font-family: var(--font-tagline);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   color: rgba(28, 26, 23, 0.75);
   margin: 0;
+}
+
+.hero-platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 36px;
 }
 
 /* ---------- Scene: mascot + speech bubble + badges ---------- */
@@ -311,26 +320,19 @@ a {
 }
 
 /* Platform stars */
-.platforms {
-  position: absolute;
-  right: 6%;
-  bottom: 190px;
-  display: flex;
-  gap: 22px;
-}
-
 .platform-star {
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 132px;
+  height: 132px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 .platform-star:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.04);
 }
 
 .platform-star .star-bg {
@@ -338,19 +340,19 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.18));
 }
 
 .platform-star .star-icon {
   position: relative;
   z-index: 2;
-  width: 42px;
+  width: 58px;
   height: auto;
   object-fit: contain;
 }
 
 .platform-star .star-icon-small {
-  width: 32px;
+  width: 44px;
 }
 
 /* Cable car */
@@ -441,13 +443,22 @@ a {
     min-height: 100vh;
   }
 
-  .platforms {
-    right: 5%;
-    bottom: auto;
-    top: 40px;
+  .hero-platforms {
     flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
+    gap: 16px;
+  }
+
+  .platform-star {
+    width: 96px;
+    height: 96px;
+  }
+
+  .platform-star .star-icon {
+    width: 42px;
+  }
+
+  .platform-star .star-icon-small {
+    width: 32px;
   }
 
   .speech-bubble {

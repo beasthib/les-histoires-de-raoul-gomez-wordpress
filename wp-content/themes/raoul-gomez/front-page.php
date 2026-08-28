@@ -7,6 +7,25 @@ $assets = get_stylesheet_directory_uri() . '/assets';
 	<h1 class="hero-title"><?php bloginfo( 'name' ); ?></h1>
 	<p class="hero-tagline">Le podcast des enfants de 3 &agrave; 6 ans</p>
 	<p class="hero-credit">&Eacute;crit et r&eacute;alis&eacute; par Claire Lou Gaillard</p>
+
+	<div class="hero-platforms">
+		<a class="platform-star" href="https://www.youtube.com/@LeshistoiresdeRaoulGomez" target="_blank" rel="noopener" aria-label="YouTube">
+			<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
+			<img class="star-icon" src="<?php echo esc_url( $assets . '/youtube.png' ); ?>" alt="" />
+		</a>
+		<a class="platform-star" href="https://shows.acast.com/les-histoires-de-raoul-gomez" target="_blank" rel="noopener" aria-label="Acast">
+			<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
+			<img class="star-icon" src="<?php echo esc_url( $assets . '/acast.png' ); ?>" alt="" />
+		</a>
+		<a class="platform-star" href="https://www.deezer.com/fr/show/5691767" target="_blank" rel="noopener" aria-label="Deezer">
+			<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
+			<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/deezer.png' ); ?>" alt="" />
+		</a>
+		<a class="platform-star" href="https://open.spotify.com/show/5FbiWpSBGxxcfEWptm2Wcu" target="_blank" rel="noopener" aria-label="Spotify">
+			<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
+			<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/spotify.png' ); ?>" alt="" />
+		</a>
+	</div>
 </div>
 
 <div class="scene">
@@ -25,25 +44,6 @@ $assets = get_stylesheet_directory_uri() . '/assets';
 				<p>Ecoute<br />mes histoires</p>
 				<span class="speech-bubble-tail"></span>
 			</div>
-		</div>
-
-		<div class="platforms">
-			<a class="platform-star" href="https://www.youtube.com/@LeshistoiresdeRaoulGomez" target="_blank" rel="noopener" aria-label="YouTube">
-				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
-				<img class="star-icon" src="<?php echo esc_url( $assets . '/youtube.png' ); ?>" alt="" />
-			</a>
-			<a class="platform-star" href="https://shows.acast.com/les-histoires-de-raoul-gomez" target="_blank" rel="noopener" aria-label="Acast">
-				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
-				<img class="star-icon" src="<?php echo esc_url( $assets . '/acast.png' ); ?>" alt="" />
-			</a>
-			<a class="platform-star" href="https://www.deezer.com/fr/show/5691767" target="_blank" rel="noopener" aria-label="Deezer">
-				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
-				<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/deezer.png' ); ?>" alt="" />
-			</a>
-			<a class="platform-star" href="https://open.spotify.com/show/5FbiWpSBGxxcfEWptm2Wcu" target="_blank" rel="noopener" aria-label="Spotify">
-				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
-				<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/spotify.png' ); ?>" alt="" />
-			</a>
 		</div>
 
 		<div class="cable-car">
