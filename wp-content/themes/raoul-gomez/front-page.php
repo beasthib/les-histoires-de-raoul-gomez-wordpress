@@ -58,4 +58,32 @@ $assets = get_stylesheet_directory_uri() . '/assets';
 	</div>
 </div>
 
+</div><!-- .hero -->
+
+<?php
+$sections = array(
+	'les-podcasts' => 'section-alt',
+	'les-projets'  => '',
+	'a-propos'     => 'section-alt',
+	'contact'      => '',
+);
+
+foreach ( $sections as $slug => $extra_class ) {
+	$page = get_page_by_path( $slug );
+	if ( ! $page ) {
+		continue;
+	}
+	?>
+	<section id="<?php echo esc_attr( $slug ); ?>" class="content-section <?php echo esc_attr( $extra_class ); ?>">
+		<div class="container content-section-inner">
+			<h2><?php echo esc_html( get_the_title( $page ) ); ?></h2>
+			<div class="content-section-body">
+				<?php echo apply_filters( 'the_content', $page->post_content ); ?>
+			</div>
+		</div>
+	</section>
+	<?php
+}
+?>
+
 <?php get_footer(); ?>

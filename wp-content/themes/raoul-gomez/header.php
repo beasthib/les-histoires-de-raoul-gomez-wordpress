@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div class="hero">
+<div class="hero" id="accueil">
 
 	<span class="sparkle" style="top:8%; left:5%; font-size:1.1rem;">&#10022;</span>
 	<span class="sparkle" style="top:32%; left:22%; font-size:1rem;">&#10022;</span>

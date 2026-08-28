@@ -26,3 +26,19 @@ function raoul_gomez_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'raoul_gomez_assets' );
+
+/**
+ * Le site fonctionne en une seule page : les liens du menu pointent vers
+ * les ancres des sections de l'accueil plutot que vers des pages separees.
+ */
+function raoul_gomez_menu_anchors( $items ) {
+	foreach ( $items as $item ) {
+		if ( 'page' !== $item->object ) {
+			continue;
+		}
+		$slug = get_post_field( 'post_name', $item->object_id );
+		$item->url = ( 'accueil' === $slug ) ? home_url( '/' ) : home_url( '/#' . $slug );
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'raoul_gomez_menu_anchors' );
