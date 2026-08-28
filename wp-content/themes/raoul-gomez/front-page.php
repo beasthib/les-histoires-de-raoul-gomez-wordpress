@@ -32,15 +32,15 @@ $assets = get_stylesheet_directory_uri() . '/assets';
 				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
 				<img class="star-icon" src="<?php echo esc_url( $assets . '/youtube.png' ); ?>" alt="" />
 			</a>
-			<a class="platform-star" href="#" target="_blank" rel="noopener" aria-label="Acast" data-platform="acast">
+			<a class="platform-star" href="https://shows.acast.com/les-histoires-de-raoul-gomez" target="_blank" rel="noopener" aria-label="Acast">
 				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
 				<img class="star-icon" src="<?php echo esc_url( $assets . '/acast.png' ); ?>" alt="" />
 			</a>
-			<a class="platform-star" href="#" target="_blank" rel="noopener" aria-label="Deezer" data-platform="deezer">
+			<a class="platform-star" href="https://www.deezer.com/fr/show/5691767" target="_blank" rel="noopener" aria-label="Deezer">
 				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
 				<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/deezer.png' ); ?>" alt="" />
 			</a>
-			<a class="platform-star" href="#" target="_blank" rel="noopener" aria-label="Spotify" data-platform="spotify">
+			<a class="platform-star" href="https://open.spotify.com/show/5FbiWpSBGxxcfEWptm2Wcu" target="_blank" rel="noopener" aria-label="Spotify">
 				<img class="star-bg" src="<?php echo esc_url( $assets . '/star.png' ); ?>" alt="" />
 				<img class="star-icon star-icon-small" src="<?php echo esc_url( $assets . '/spotify.png' ); ?>" alt="" />
 			</a>
